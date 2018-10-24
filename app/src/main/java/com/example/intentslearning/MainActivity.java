@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intentSendMessage = new Intent(MainActivity.this, ReciveMessageActivity.class);
 
-                intentSendMessage.putExtra(EXTRA_SENT_MESSAGE, msg);
+                intentSendMessage.putExtra(Intent.EXTRA_TEXT, msg);
 
                 startActivity(intentSendMessage);
             }
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 intentShare.setType("text/plain");
 
                 intentShare.putExtra(EXTRA_SENT_MESSAGE, editTextmessage.getText().toString());
-                
+
                 startActivity(intentShare);
             }
         });
